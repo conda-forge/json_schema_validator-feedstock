@@ -26,8 +26,8 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/include/json-schema.hpp  # [unix]
-    - test -f ${PREFIX}/lib/libjson-schema-validator.so  # [unix]
+    - test -f ${PREFIX}/include/nlohmann/json-schema.hpp  # [unix]
+    - test -f ${PREFIX}/lib/libnlohmann_json_schema_validator.so  # [unix]
 
 about:
   home: https://github.com/pboettch/json-schema-validator
