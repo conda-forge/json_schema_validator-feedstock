@@ -1,0 +1,12 @@
+cmake . ^
+-G"NMake Makefiles" ^
+-DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+-DBUILD_SHARED_LIBS=ON ^
+-DBUILD_EXAMPLES=OFF ^
+-DBUILD_TESTS=OFF ^
+-DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE ^
+-Bbuildir 
+
+cd buildir
+nmake
+nmake install

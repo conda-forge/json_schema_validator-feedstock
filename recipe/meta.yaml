@@ -11,8 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [osx]
+  number: 1
 
 requirements:
   build:
@@ -27,7 +26,11 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/include/nlohmann/json-schema.hpp  # [unix]
-    - test -f ${PREFIX}/lib/libnlohmann_json_schema_validator.so  # [unix]
+    - test -f ${PREFIX}/lib/libnlohmann_json_schema_validator.so  # [linux]
+    - test -f ${PREFIX}/lib/libnlohmann_json_schema_validator.dylib  # [osx]
+    - test -f %PREFIX%\Library\include\nlohmann\json-schema.hpp  # [win]
+    - test -f %PREFIX%\Library\bin\nlohmann_json_schema_validator.dll  # [win]
+    - test -f %PREFIX%\Library\lib\nlohmann_json_schema_validator.lib  # [win]
 
 about:
   home: https://github.com/pboettch/json-schema-validator
