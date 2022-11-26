@@ -1,6 +1,6 @@
 {% set name = "json_schema_validator" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "83f61d8112f485e0d3f1e72d51610ba3924b179926a8376aef3c038770faf202" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "03897867bd757ecac1db7545babf0c6c128859655b496582a9cea4809c2260aa" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
