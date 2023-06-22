@@ -1,10 +1,13 @@
 #! /bin/bash
 
-cmake . \
--DCMAKE_INSTALL_PREFIX=$PREFIX \
--DBUILD_SHARED_LIBS=ON \
--DBUILD_EXAMPLES=OFF \
--DBUILD_TESTS=OFF \
--Bbuilddir
+mkdir builddir
+pushd builddir
+cmake .. \
+  ${CMAKE_ARGS} \
+  -GNinja \
+  -DBUILD_SHARED_LIBS=ON \
+  -DBUILD_EXAMPLES=OFF \
+  -DBUILD_TESTS=OFF
 
-make -C builddir/ install
+ninja
+ninja install
