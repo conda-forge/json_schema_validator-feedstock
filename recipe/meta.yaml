@@ -19,7 +19,6 @@ requirements:
     - ninja
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
   host:
     - nlohmann_json
   run:
