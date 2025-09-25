@@ -81,7 +81,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-json_schema_validator-green.svg)](https://anaconda.org/conda-forge/json_schema_validator) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/json_schema_validator.svg)](https://anaconda.org/conda-forge/json_schema_validator) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/json_schema_validator.svg)](https://anaconda.org/conda-forge/json_schema_validator) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/json_schema_validator.svg)](https://anaconda.org/conda-forge/json_schema_validator) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-json__schema__validator-green.svg)](https://anaconda.org/conda-forge/json_schema_validator) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/json_schema_validator.svg)](https://anaconda.org/conda-forge/json_schema_validator) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/json_schema_validator.svg)](https://anaconda.org/conda-forge/json_schema_validator) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/json_schema_validator.svg)](https://anaconda.org/conda-forge/json_schema_validator) |
 
 Installing json_schema_validator
 ================================
@@ -197,5 +197,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@JohanMabille](https://github.com/JohanMabille/)
 * [@asafkahlon](https://github.com/asafkahlon/)
 
