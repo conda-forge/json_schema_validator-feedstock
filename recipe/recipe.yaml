@@ -33,8 +33,8 @@ tests:
           - ${{ "Library/" if win }}include/nlohmann/json-schema.hpp
           - if: win
             then:
-              - Library/bin/libnlohmann_json_schema_validator.dll
-              - Library/lib/libnlohmann_json_schema_validator.lib
+              - Library/bin/nlohmann_json_schema_validator.dll
+              - Library/lib/nlohmann_json_schema_validator.lib
           - if: linux
             then:
               - lib/libnlohmann_json_schema_validator.so
