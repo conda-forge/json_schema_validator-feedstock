@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(validator_test CXX)
+find_package(nlohmann_json_schema_validator REQUIRED)
+add_executable(validator_test main.cpp)
+target_link_libraries(validator_test nlohmann_json_schema_validator::validator)
+target_compile_features(validator_test PRIVATE cxx_std_17)

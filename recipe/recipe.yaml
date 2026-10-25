@@ -41,6 +41,28 @@ tests:
           - if: osx
             then:
               - lib/libnlohmann_json_schema_validator.dylib
+        not_exists:
+          # a Release build's targets file; the Debug one means the DLL links the debug runtime
+          - if: win
+            then: Library/lib/cmake/nlohmann_json_schema_validator/nlohmann_json_schema_validatorTargets-debug.cmake
+  - files:
+      recipe:
+        - test/
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - cmake
+        - ninja
+    script:
+      - if: unix
+        then:
+          - cmake -S test -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$PREFIX
+          - cmake --build build
+          - ./build/validator_test
+        else:
+          - cmake -S test -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX%
+          - cmake --build build
+          - build\validator_test.exe
 
 about:
   homepage: https://github.com/pboettch/json-schema-validator
